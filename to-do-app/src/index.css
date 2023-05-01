@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+
+.west-card {
+    position: relative;
+    background-color: rgb(16 16 16);
+    border: 1px solid rgb(255 255 255 / 5%);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background-image: radial-gradient(
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px
+    );
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+}
+
+.west-card:after {
+    content: "";
+    height: 70px;
+    width: 1px;
+    position: absolute;
+    left: -1px;
+    top: 65%;
+    transition: top, opacity;
+    transition-duration: 600ms;
+    transition-timing-function: ease;
+    background: linear-gradient(
+            transparent,
+            mediumslateblue,
+            transparent
+    );
+    opacity: 0;
+}
+
+/*.west-card:after {*/
+/*    top: 65%;*/
+/*    opacity: 0;*/
+/*}*/
+
+.west-card:hover:after {
+    top: 25%;
+    opacity: 1;
+}
+
+.west-card-title{
+    color: mediumslateblue;
+}
+
